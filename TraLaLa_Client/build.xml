@@ -27,7 +27,7 @@
     </target>
     
 	<target name="client" description="Runs Client program">
-		<java classname="main.Main" classpathref="classpath" fork="true">
+		<java classname="mainCliente.Main" classpathref="classpath" fork="true">
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>			
         	<arg value="${registry.IP}"/> 
 	 		<arg value="${registry.port}"/> 
