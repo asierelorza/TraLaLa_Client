@@ -2,6 +2,8 @@ package mainCliente;
 
 import java.rmi.RemoteException;
 
+import data.Artista;
+import data.Cancion;
 import remote.TraServiceLocator;
 
 public class Main {
@@ -10,8 +12,15 @@ public class Main {
 		TraServiceLocator serviceLocator = new TraServiceLocator();
 		serviceLocator.setService(args[0], args[1], args[2]);
 		
+//		try {
+//			serviceLocator.getService().login("axi", "dorron", "iepa", 10, true);
+//		} catch (RemoteException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
 		try {
-			serviceLocator.getService().login("axi", "dorron", "iepa", 10, true);
+			System.out.println(serviceLocator.getService().reproducirCancion(new Cancion("ue", 1, "axi", 4, new Artista(1, "dorron"))));
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
