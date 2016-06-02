@@ -7,20 +7,20 @@ import java.rmi.RemoteException;
 
 public class TraServiceLocator {
 	
-	private IGlobalService service; // Da error porque falta el lib
+	private IGlobalService2 service;
 	
 	public TraServiceLocator(){
-		// Constructor vacio
+		
 	}
 	
 	public void setService(String ip, String port, String name){
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new RMISecurityManager());
 		}
-		// Inicializar el façade global. se hara una sola vez
-		String url = "//" + ip + ":" + port + "/" + name; // Este nombre en funcion de que? En funcion de lo que le pasa el main.
+		
+		String url = "//" + ip + ":" + port + "/" + name;
 		try{
-			service = (IGlobalService) java.rmi.Naming.lookup(url);
+			service = (IGlobalService2) java.rmi.Naming.lookup(url);
 			
 		}
 		catch(MalformedURLException | RemoteException | NotBoundException e){
@@ -31,7 +31,7 @@ public class TraServiceLocator {
 		
 	}
 	
-	public IGlobalService getService(){
+	public IGlobalService2 getService(){
 		// Cada vez que se quiera acceder al servidor, se tendra que hacer esto
 		
 		return service;
