@@ -13,6 +13,7 @@ public class Rep_List_Controller {
 	
 	public boolean ReproducirCancion(){
 //		this.tsl.getService().reproducirCancion(new Cancion(arg0, arg1, arg2, arg3, arg4));
+		// Tendria que recibir la cancion escogida por el usuario de la lista
 		return false;
 	}
 

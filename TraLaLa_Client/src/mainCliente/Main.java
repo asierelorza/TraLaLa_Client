@@ -37,6 +37,8 @@ public class Main {
 		MenuGUI mgui = new MenuGUI(irc, rlc);
 		mgui.setVisible(true);
 		
+		// Insercion de datos directo:
+		
 //		try {
 //			serviceLocator.getService().login("axi", "dorron", "iepa", 10, true);
 //		} catch (RemoteException e) {

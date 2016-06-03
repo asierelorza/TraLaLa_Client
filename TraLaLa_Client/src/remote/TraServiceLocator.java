@@ -32,8 +32,7 @@ public class TraServiceLocator {
 	}
 	
 	public IGlobalService2 getService(){
-		// Cada vez que se quiera acceder al servidor, se tendra que hacer esto
-		
+				
 		return service;
 	}
 	
